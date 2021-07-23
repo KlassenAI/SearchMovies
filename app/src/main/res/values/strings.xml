@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SearchMovies</string>
+    <string name="hint_edit_text">Поиск по названию фильма</string>
+    <string name="message_request_empty">По запросу “%s” ничего не найдено</string>
+    <string name="message_request_failed">Нам не удалось обработать ваш запрос. Попробуйте еще раз</string>
+    <string name="message_loading_error">Проверьте соединение с интернетом и попробуйте еще раз</string>
+    <string name="cd_btn_refresh">Повторить запрос</string>
+    <string name="cd_card_photo">Постер фильма</string>
+    <string name="cd_message_request_failed">Ошибка запроса</string>
+    <string name="cd_message_request_empty">Пустой список</string>
+    <string name="cd_search_image_view">Поиск</string>
+    <string name="cd_card_calendar_image">Дата</string>
+    <string name="cd_card_like">Нравится</string>
+</resources>

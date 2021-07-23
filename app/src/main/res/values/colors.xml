@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorStatusBarBackground">#0c0d0d</color>
+    <color name="colorAppBackground">#1c1d1f</color>
+    <color name="colorEditTextBackground">#fafafa</color>
+    <color name="colorCardSecondaryText">#747474</color>
+    <color name="colorEditTextHint">#9b9b9b</color>
+    <color name="colorEditText">#212121</color>
+    <color name="colorMessageEmptyText">#B4B4B4</color>
+    <color name="colorAccent">#004FFF</color>
+    <color name="colorAccentVariant">#0b348c</color>
+</resources>

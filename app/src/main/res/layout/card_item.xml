@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.android.searchmovies.model.Movie" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="183dp">
+
+            <ImageView
+                android:id="@+id/card_photo"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/cd_card_photo"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                bind:posterPath="@{movie.posterPath}" />
+
+            <TextView
+                android:id="@+id/card_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="17dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card_photo"
+                app:layout_constraintTop_toTopOf="parent"
+                bind:text="@{movie.title}" />
+
+            <TextView
+                android:id="@+id/card_description"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="2dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:maxLines="3"
+                android:shrinkColumns="0, true"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/card_calendar_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card_photo"
+                app:layout_constraintTop_toBottomOf="@+id/card_title"
+                app:layout_constraintVertical_bias="0.0"
+                bind:overview="@{movie.overview}" />
+
+            <ImageView
+                android:id="@+id/card_calendar_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/cd_card_calendar_image"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card_photo" />
+
+            <TextView
+                android:id="@+id/card_calendar_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/card_calendar_image"
+                app:layout_constraintEnd_toStartOf="@+id/card_like"
+                app:layout_constraintStart_toEndOf="@+id/card_calendar_image"
+                app:layout_constraintTop_toTopOf="@+id/card_calendar_image"
+                bind:releaseDate="@{movie.releaseDate}" />
+
+            <ImageView
+                android:id="@+id/card_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/cd_card_like"
+                android:src="@drawable/ic_heart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
